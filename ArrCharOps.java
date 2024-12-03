@@ -194,9 +194,9 @@ public class ArrCharOps {
             return 0;
         }
         else if (str1.length()>str2.length()) {
-            return -1;
+            return 1;
         }
-        else return 1;  
+        else return -1;  
 
     
     }
