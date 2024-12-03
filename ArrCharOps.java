@@ -149,6 +149,7 @@ public class ArrCharOps {
             result += arr[i] * Math.pow(7, n - (i + 1));
         }
         return result;
+    
     }
 
     /**
@@ -179,25 +180,27 @@ public class ArrCharOps {
     public static int compareTo(String str1, String str2) {
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();
-        if (str1.equals(str2)){
-            return 0;
-        }
         int minLength = Math.min(str1.length(), str2.length());
 
         for (int i = 0; i < minLength; i++) {
             if (str1.charAt(i) != str2.charAt(i)){
                 if((int)str1.charAt(i) < (int)str2.charAt(i)){
-                    return -1;
-                }else{
-                    return 1;
-                }
+                    return str1.charAt(i)<str2.charAt(i) ? -1: 1;
+             }
             }
         }
-
-        if (minLength == str1.length()){
-            return -1;
-        }else{
-            return 1;
+       
+        if (str1.equals(str2)){
+            return 0;
         }
+        else if (str1.length()>str2.length()) {
+            return -1;
+        }
+        else return 1;  
+
+    
     }
 }
+    
+    
+           
