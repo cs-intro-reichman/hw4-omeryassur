@@ -184,13 +184,11 @@ public class ArrCharOps {
 
         for (int i = 0; i < minLength; i++) {
             if (str1.charAt(i) != str2.charAt(i)){
-                if((int)str1.charAt(i) < (int)str2.charAt(i)){
                     return str1.charAt(i)<str2.charAt(i) ? -1: 1;
              }
-            }
         }
        
-        if (str1.equals(str2)){
+        if (str1.length()==str2.length()){
             return 0;
         }
         else if (str1.length()>str2.length()) {
